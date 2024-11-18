@@ -1,1 +1,0 @@
-<x-side-bar.menu/>
