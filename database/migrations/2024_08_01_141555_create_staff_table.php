@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('staff', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
+            $table->string('name');
+            $table->string('tel');
             $table->enum('role', ['admin', 'instructor']);
-            $table->foreignId('office_id')->constrained();
+            $table->foreignId('tenant_id')->constrained();
             $table->timestamps();
         });
     }

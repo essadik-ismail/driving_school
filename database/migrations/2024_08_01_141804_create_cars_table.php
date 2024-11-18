@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
             $table->foreignId('profil_id')->constrained();
-            $table->foreignId('office_id')->constrained();
-            $table->date('date');
+            $table->foreignId('tenant_id')->constrained();
+            $table->date('date')->default(now());
             $table->timestamps();
         });
     }

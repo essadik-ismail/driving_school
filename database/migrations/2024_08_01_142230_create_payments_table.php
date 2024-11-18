@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('office_id')->constrained();
+            $table->foreignId('tenant_id')->constrained();
             $table->foreignId('profil_id')->constrained();
-            $table->date("date");
+            $table->date("date")->default(now());
             $table->double('amount');
             $table->timestamps();
         });

@@ -21,10 +21,10 @@ return new class extends Migration
             $table->date('birthday');
             $table->string('birth_city', 40);
             $table->string('reference');
-            $table->date('signin_date');
-            $table->string('cinimage');
-            $table->string('image_id');
-            $table->foreignId('office_id')->constrained();
+            $table->date('signin_date'); //fo9ach tsajal f auto ecole
+            $table->string('cinimage'); //cin image
+            $table->string('image');
+            $table->foreignId('tenant_id')->constrained();
             $table->timestamps();
         });
     }
